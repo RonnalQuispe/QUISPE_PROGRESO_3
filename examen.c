@@ -49,7 +49,7 @@ int main(int argc, char const *argv[])
     int n;
 
     int opcion; // creacion del menu
-
+struct producto *productos = NULL;
     do
     {
         printf("Menu:\n");
