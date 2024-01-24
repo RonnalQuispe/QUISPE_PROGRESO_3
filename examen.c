@@ -50,6 +50,18 @@ void imprimirDatos(struct producto *productos, int n) {// funcion imprimir datos
         printf("\n");
     }
 }
+int main(int argc, char const *argv[])
+{
+    int n;
+    printf("ingrese la cantidad de productos que va registrar: ");
+    scanf("%d", &n); 
+    fflush(stdin); // Limpiar el buffer del teclado
+    struct producto *productos  = malloc(n * sizeof(struct producto)); // asigna un bloque de memoria 
+    ingresarDatos(productos, n); // llama a la funcion ingresar datos 
+
+    return 0;
+}
+
 
 
 
