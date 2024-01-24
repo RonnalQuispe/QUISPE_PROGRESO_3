@@ -41,16 +41,7 @@ void imprimirDatos(struct producto *productos, int n)
 { // funcion imprimir datos
     for (int i = 0; i < n; i++)
     {
-        printf("Datos del producto %d ;", i + 1);
-        printf("COD.: ");
-        puts(productos[i].codigo);
-        printf("NOMBRE DEL PRO. : ");
-        puts(productos[i].nomproduc);
-        printf("DESC. DEL PRODUC.: ");
-        puts(productos[i].descproduc);
-        printf("PRECIO COMPRA: %f  ", productos[i].precioCompra);
-        printf("Cantidad: %d ;", productos[i].cantidad);
-        printf("\n");
+        printf("Datos del producto %d:----COD.: %s ---- NOMBRE DEL PROD: %s ---- DESC. DEL PRODUC: %s ---- PRECIO COMPRA: %f ---- Cantidad: %d\n", i + 1, productos[i].codigo, productos[i].nomproduc, productos[i].descproduc, productos[i].precioCompra, productos[i].cantidad);// cambiamos la linea de codigo generada anteriormente para que todo se imprima en una sola  linea 
     }
 }
 int main(int argc, char const *argv[])
