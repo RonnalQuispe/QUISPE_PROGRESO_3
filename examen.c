@@ -71,8 +71,13 @@ do {
 
         
         switch (opcion) {// con esta funcion sirve para hacer el menu 
+            case 1:
+            
+            
+            break;
             case 2:
-                
+                // Imprimir datos de todos los alumnos
+                imprimirDatos(productos, n);
                 break;
             case 3:
                 
