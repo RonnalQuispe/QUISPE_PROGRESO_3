@@ -36,6 +36,20 @@ void ingresarDatos(struct producto *productos, int n) {// funcion ingresar datos
         fflush(stdin); // Limpiar el buffer del teclado
     }
 }
+void imprimirDatos(struct producto *productos, int n) {// funcion imprimir datos 
+     for (int i = 0; i < n; i++) {
+        printf("Datos del producto %d ;", i + 1);
+        printf("COD.: ");
+        puts(productos[i].codigo);
+        printf("NOMBRE DEL PRO. : ");
+        puts(productos[i].nomproduc);
+        printf("DESC. DEL PRODUC.: ");
+        puts(productos[i].descproduc);
+        printf("PRECIO COMPRA: %f  ", productos[i].precioCompra);
+        printf("Cantidad: %d ;", productos[i].cantidad);
+        printf("\n");
+    }
+}
 
 
 
