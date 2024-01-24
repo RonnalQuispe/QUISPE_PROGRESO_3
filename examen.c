@@ -35,24 +35,26 @@ void ingresarDatos(struct producto *productos, int n)
         printf("cantidad: ");
         scanf("%d", &(productos[i].cantidad));
         fflush(stdin); // Limpiar el buffer del teclado
+        printf("\n");
     }
 }
 void imprimirDatos(struct producto *productos, int n)
 { // funcion imprimir datos
     for (int i = 0; i < n; i++)
     {
-        printf("Datos del producto %d:----COD.: %s ---- NOMBRE DEL PROD: %s ---- DESC. DEL PRODUC: %s ---- PRECIO COMPRA: %f ---- Cantidad: %d\n", i + 1, productos[i].codigo, productos[i].nomproduc, productos[i].descproduc, productos[i].precioCompra, productos[i].cantidad);// cambiamos la linea de codigo generada anteriormente para que todo se imprima en una sola  linea 
+        printf("Datos del producto %d:----COD.: %s ---- NOMBRE DEL PROD: %s ---- DESC. DEL PRODUC: %s ---- PRECIO COMPRA: %f ---- Cantidad: %d\n", i + 1, productos[i].codigo, productos[i].nomproduc, productos[i].descproduc, productos[i].precioCompra, productos[i].cantidad); // cambiamos la linea de codigo generada anteriormente para que todo se imprima en una sola  linea
     }
 }
 int main(int argc, char const *argv[])
 {
     int n;
-
     int opcion; // creacion del menu
-struct producto *productos = NULL;// inicializamos el puntero a NULL
+
     do
     {
-        printf("Menu:\n");
+        printf("\n");
+        printf("..........MENU...........\n");
+        printf("\n");
         printf("1. Ingresar los datos \n");
         printf("2. mostrar elm inventario\n");
         printf("3. salir\n");
@@ -63,6 +65,7 @@ struct producto *productos = NULL;// inicializamos el puntero a NULL
         switch (opcion)
         { // con esta funcion sirve para hacer el menu
         case 1:
+
             printf("ingrese la cantidad de productos que va registrar: ");
             scanf("%d", &n);
             fflush(stdin);                                                    // Limpiar el buffer del teclado
@@ -73,11 +76,12 @@ struct producto *productos = NULL;// inicializamos el puntero a NULL
         case 2:
             // Imprimir datos de todos los alumnos
             imprimirDatos(productos, n);
+            printf("\n");
             break;
         case 3:
             // Salir del programa
-                printf("programa cerrado, que tenga un buen dia------ :3 <3-------\n");
-                break;
+            printf("programa cerrado, que tenga un buen dia------ :3 <3-------\n");
+            break;
             break;
         default:
             // opcion invalida
