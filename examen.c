@@ -58,7 +58,31 @@ int main(int argc, char const *argv[])
     fflush(stdin); // Limpiar el buffer del teclado
     struct producto *productos  = malloc(n * sizeof(struct producto)); // asigna un bloque de memoria 
     ingresarDatos(productos, n); // llama a la funcion ingresar datos 
+int opcion ;// creacion del menu 
 
+do {
+        printf("Menu:\n");
+        printf("1. Ingresar los datos \n");
+        printf("2. mostrar elm inventario\n");
+        printf("3. salir\n");
+        printf("Ingrese una opcion: ");
+        scanf("%d", &opcion);
+        fflush(stdin); 
+
+        
+        switch (opcion) {// con esta funcion sirve para hacer el menu 
+            case 2:
+                
+                break;
+            case 3:
+                
+                break;
+            default:
+                //opcion invalida 
+                printf("Opcion invalida\n");
+                break;
+        }
+    } while (opcion != 3); // Repetir el menu hasta que se elija la opcion 3
     return 0;
 }
 
